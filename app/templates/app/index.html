@@ -1,0 +1,213 @@
+{% extends 'app/base.html' %} 
+
+{% block contenido %}
+
+{% load static %}
+
+
+  <!--carrusel -->
+  <div class="texto-pa" id="rojo">
+    <h2>Rayo Makween</h2>
+  </div>
+
+  <div id="carrusel" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+      <li data-target="#carrusel" data-slide-to="1"></li>
+      <li data-target="#carrusel" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/img/carr3.jpg' %}" alt="carrusel1" width="1100" height="500" />
+        <div class="carousel-caption">
+          <h3>Instalaciones optimas</h3>
+          <p>tenemos el mejor espacio de trabajo</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/img/Automotive_Mechanic_1920x1080.jpg' %}" alt="carrusel2" width="1100" height="500" />
+        <div class="carousel-caption">
+          <h3>personal de primera</h3>
+          <p>Los mejores profesionales en el rubro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/img/limpieza-herramientas-covid.jpg' %}" alt="carrusel3" width="1100" height="500" />
+        <div class="carousel-caption">
+          <h3>Herramientas</h3>
+          <p>Calidad asegurada</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carrusel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carrusel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <!--Carrusel
+      <div class="content-all">
+        <div class="content-carrousel">
+          <figure><img src="img/img1.jpg" ></figure>
+          <figure><img src="img/img2.jpg" ></figure>
+          <figure><img src="img/img3.jpg" ></figure>
+          <figure><img src="img/img4.jpg" ></figure>
+          <figure><img src="img/img5.jpg" ></figure>
+          <figure><img src="img/img6.jpg" ></figure>
+          <figure><img src="img/img7.jpg" ></figure>
+          <figure><img src="img/img8.jpg" ></figure>
+          <figure><img src="img/img9.jpg" ></figure>
+          <figure><img src="img/img10.jpg" ></figure>
+        </div>
+      </div>-->
+
+  <!--Quienes somos-->
+  <section class="center espacio" id="nosotros">
+    <h2>Quienes somos</h2>
+    <p>
+      Rayo Makween es una empresa destinada al rubro automotriz la cual posé
+      una basta trayectoria, rayo Makween nace en el año 2000 luego que un
+      grupo de amigos decidieran emprender juntos en el desarrollo del taller
+      , dicho grupo de personas luego de haber trabajado en distintas áreas
+      del sector mecánico y especializándose en ellas decidieron juntar
+      fuerzas y llevar acabo la unión de los distintos conocimientos en un
+      solo taller.
+    </p>
+    <img id="cars" class="mx-auto" src="{% static 'app/img/logocars.png' %}" alt="logocars" />
+  </section>
+  <section id="imagen-efecto">
+    <h2 class="text-center" style="padding-top:7rem;">Consultas</h2>
+  </section>
+  <section class="texto peque">
+    <h2>
+      Debido a la pandemia, solo se agendan visitas con previa solicitud de
+      hora de atención.
+    </h2>
+  </section>
+
+
+
+  <div class="texto-pa">
+    <h2>Nuestros clientes nos recomiendan</h2>
+  </div>
+
+  <section class="imagen-efecto">
+    <section class="cards">
+      <section class="card contact">
+        <div class="icon" id="contenido">
+          <!--imagen del usuario-->
+        </div>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+      </section>
+      <section class="card shop">
+        <div class="icon" id="contenido2">
+          <!--imagen del usuario-->
+        </div>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+      </section>
+      <section class="card about">
+        <div id="contenido3" class="icon">
+          <!--imagen del usuario-->
+        </div>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+      </section>
+    </section>
+
+    <!--
+      <button type="button" onclick="traer(), traer2(), traer3()">hola </button>
+    -->
+  </section>
+  <!--<form action="#" class="caja-form">
+          <h3>Contacto</h3>
+
+          <label for="nombre"><b>Nombre</b></label>
+          <input type="text" class="form-control" placeholder="Ingresa tu nombre" id="nombre" required/>
+
+          <label for="email"><b>Correo</b></label>
+          <input type="text" class="form-control" placeholder="ejemplo@mail.com" id="email" required/>
+
+          <label for="mensaje"><b>Consulta</b></label>
+          <input type="text" class="form-control" placeholder="Ingresa tu mensaje..." id="mensaje" required/>
+          
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </form>-->
+
+  <div class="caja-mapa">
+    <h2 class="h2">UBICACIÓN</h2>
+    <hr style="width: 100%" />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.459661036724!2d-71.5331841!3d-33.0336892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8004f381e9055a38!2sDuoc%20UC%3A%20Sede%20Vi%C3%B1a%20Del%20Mar!5e0!3m2!1ses!2scl!4v1619999498142!5m2!1ses!2scl"
+      width="500" height="450" style="border: 0" allowfullscreen="" loading="lazy" aria-hidden="false"
+      tabindex="0"></iframe>
+  </div>
+
+  <!-- -->
+  <div class="container">
+    <h1 id="conctact" class="logo">Formulario <span>Contacto</span></h1>
+
+    <div class="contact-wrapper animated bounceInUp">
+      <div class="contact-form">
+        <h3>¡Contáctanos!</h3>
+
+        <form id="formularioContacto" action="" method="GET">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre"
+              placeholder="Nombre">
+          </div>
+          <div>
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="apellido"
+              placeholder="Apellido">
+          </div>
+          <div class="">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+              placeholder="ejemplo@mail.com">
+          </div>
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono"
+              name="telefono" placeholder="912345678">
+          </div>
+          <div class="block">
+            <label for="mensaje">Mensaje</label>
+            <textarea  id="mensaje" name="mensaje"
+              rows="3" placeholder="Escriba aquí su mensaje"></textarea>
+          </div>
+          <!-- botones enviar y limpiar -->
+          <div class="block">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+        
+
+
+        <div class="contact-info">
+          <h4>Más información</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 5 Norte Viña Del Mar</li>
+            <li><i class="fas fa-phone"></i> (032)404608</li>
+            <li>
+              <i class="fas fa-envelope-open-text"></i> Rayo.Makween@gmail.com
+            </li>
+          </ul>
+          <p></p>
+          <p>https://Rayo.Makween.com</p>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}
