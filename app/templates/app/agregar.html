@@ -1,0 +1,29 @@
+{% extends 'app/base.html'%} {% block contenido %}
+
+{% load crispy_forms_tags %}
+
+<br>
+<br>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card" style="background-color:#222222;">
+            <div class="card-body">
+                <h2 class="text-center">Agregar Servicio</h2>
+                <hr> 
+                <form action="" method="POST">
+                    {% csrf_token %} {{ form | crispy }}
+    
+                    <div class="d-flex justify-content-end">
+                        <input value="Agregar" type="submit" name="agregar" class="btn btn-primary" />
+                        &nbsp;
+                        <input value="Limpiar" type="reset" name="limpiar" class="btn btn-primary" style="background: #B70E21;"/>
+                    </div>
+                </form>
+                {{mensaje}}
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
