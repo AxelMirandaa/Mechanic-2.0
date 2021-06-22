@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'app',
     'django.contrib.humanize',
     'crispy_forms',
+    'rest_framework',
+    'rest_servicio',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
