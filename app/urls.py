@@ -1,7 +1,7 @@
 
 from django.urls import path
 
-from .views import home, servicios, agregar, modificar, listar, eliminar
+from .views import home, registro, servicios, agregar, modificar, listar, eliminar, registro
 
 
 urlpatterns = [
@@ -12,5 +12,6 @@ urlpatterns = [
     path('modificar/<id>/', modificar, name='modificar'),
     path('listar/', listar, name='listar'),
     path('eliminar/<id>', eliminar, name='eliminar'),
+    path('registro',registro,name='registro'),
 
 ]

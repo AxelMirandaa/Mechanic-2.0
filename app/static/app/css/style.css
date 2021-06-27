@@ -111,6 +111,25 @@ h2 {
     font-weight: 400;
 }
 
+/* EFECTO IMAGEN DE REGISTRO DE USUARIO*/
+.imagen-efecto-registro {
+    height: 150vh;
+    background-image: url(../img/mecanico2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-efecto-registro h2 {
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 400;
+}
+
+
 .h2{
 
     display: flex;

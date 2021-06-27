@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro usuario</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="{% static 'app/css/style.css' %}"/>
 </head>
@@ -18,33 +18,31 @@
     <br>
     <br>
 
-    <div class="imagen-efecto">
+    <div class="imagen-efecto-registro">
         <div class="container ">
             <div class="row">
                 <div class="col-12 col-md-6 offset-md-3 ">
                     <div class="card mt-5" style="background-color:#222222;">
                         <div class="card-body ">
-                            <h2>Iniciar Sesión</h2>
+                            <h2>Registro de usuario</h2>
                             <hr>
                             <form action="" method="POST">
                                 {% csrf_token %}
                                 {{ form|crispy }}
                                 <a href="{% url 'home' %}">ir a inicio</a>
                                 <span> | </span>
-                                <a href="{% url 'registro' %}">registrate</a>
-                                <input type="submit" value="ingresar" class="btn btn-success float-right">
+                                <a href="{% url 'login' %}">iniciar sesión</a>
+                                <input type="submit" value="registrar" class="btn btn-success float-right">
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
     </div>
-
-
-
-
-    
     
 
 </body>
