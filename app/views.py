@@ -3,6 +3,7 @@ from .models import Servicio
 from .forms import ServicioForm, CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required, permission_required
 
 # Create your views here.
 
@@ -18,6 +19,7 @@ def servicios(request):
 
     return render(request,'app/servicios.html',data)
 
+@permission_required('app.add_servicio')
 def agregar(request):
 
     data = {
@@ -34,7 +36,7 @@ def agregar(request):
 
     return render(request,'app/agregar.html', data)
 
-
+@permission_required('app.view_servicio')
 def listar(request):
     servicios = Servicio.objects.all()
     data = {
@@ -42,7 +44,7 @@ def listar(request):
     }
     return render(request,'app/listar.html', data)
 
-
+@permission_required('app.change_servicio')
 def modificar(request, id):
 
     servicio = get_object_or_404(Servicio, nombre_servicio=id)
@@ -63,7 +65,7 @@ def modificar(request, id):
     return render(request,'app/modificar.html',data)
 
 
-
+@permission_required('app.delete_servicio')
 def eliminar(request, id):
     servicio = get_object_or_404(Servicio,nombre_servicio=id)
     servicio.delete()

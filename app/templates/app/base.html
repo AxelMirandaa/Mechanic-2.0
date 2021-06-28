@@ -88,12 +88,16 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
             </li>
+            {% if perms.app.add_servicio %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'agregar' %}">Agregar</a>
             </li>
+            {% endif %}
+            {% if perms.app.view_servicio %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'listar' %}">Listar</a>
             </li>
+            {% endif %}
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a>

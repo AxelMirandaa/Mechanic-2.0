@@ -113,7 +113,7 @@ h2 {
 
 /* EFECTO IMAGEN DE REGISTRO DE USUARIO*/
 .imagen-efecto-registro {
-    height: 150vh;
+    height: 180vh;
     background-image: url(../img/mecanico2.jpg);
     background-attachment: fixed;
     background-size: cover;
