@@ -27,3 +27,28 @@ def lista_servicios(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(['GET','PUT','DELETE'])
+def detalle_servicio(request,id):
+
+    try:
+        servicio = Servicio.objects.get(nombre_servicio=id)
+    except Servicio.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = ServicioSerializer(servicio)
+        return Response(serializer.data)
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = ServicioSerializer(servicio,data=data)
+        if(serializer.is_valid()):
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        servicio.delete()
+        return Response(status=status.HTTP_204_NOT_CONTENT)
