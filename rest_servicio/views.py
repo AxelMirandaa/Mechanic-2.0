@@ -29,7 +29,6 @@ def lista_servicios(request):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
 @api_view(['GET','PUT','DELETE'])
 def detalle_servicio(request,id):
 
