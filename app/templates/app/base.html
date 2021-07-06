@@ -51,9 +51,7 @@
       href="{% static 'app/css/style.css' %}"
     />
 
-    {% block js %}
     
-    {% endblock %}
   </head>
 
   <body>
@@ -183,9 +181,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="{% static 'app/js/formulario.js' %}"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% block js %}
+    
+    {% endblock %}
 
     {% if messages %}
       {% for m in messages %}

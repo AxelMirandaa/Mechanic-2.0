@@ -1,0 +1,77 @@
+{% extends 'app/base.html'%}
+
+{% block contenido %}
+
+<section id="imagen-efecto">
+    <div >
+        <h2 class="text-center mx-auto" style="padding-top: 5rem; border-bottom: #fff solid 1px; width: 50%;">
+            Listado de servicios y precios
+        </h2>
+        
+    </div>
+</section>
+
+    
+
+</div>
+{% load humanize %}
+
+<section class="container">
+    <div class="row">
+        <!--Producto estructura-->
+        <div class="col-md-12 producto row" style="padding: 1rem; ">
+            <div id="servicio1" class="col-md-8">
+                
+            </div>
+            <div class="col-md-4" id="servicio2">
+            
+            </div>
+            
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+
+<script>
+
+    var contenidoServicio1 = document.querySelector('#servicio1')
+    var contenidoServicio2 = document.querySelector('#servicio2')
+
+    function leerApiServicios(){
+
+    }
+    
+    fetch('http://127.0.0.1:8000/api/lista_servicios')
+        .then(res => res.json() )
+        .then(data =>{
+            console.log(data)
+            listarApi(data)  
+
+        })
+    
+        function listarApi(datos){
+            for (let i of datos) {
+                //console.log(i)
+                contenidoServicio1.innerHTML += 
+                `<h2>${i.nombre_servicio}</h2>
+                <p>${i.descripcion}</p> <hr>`;
+
+                contenidoServicio2.innerHTML += 
+                `<h2>desde <span style="color: rgb(70, 189, 70); text-shadow: 2px 2px rgb(19, 102, 33);">${i.precio}</span></h2>
+                <p>Duración: <span>${i.duracion}</span> minutos</p> <hr>`;
+
+
+    
+                
+                
+            }
+
+        }
+
+
+
+</script>
+{% endblock %}

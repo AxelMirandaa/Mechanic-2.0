@@ -10,6 +10,11 @@ from django.contrib.auth.decorators import login_required, permission_required
 def home(request):
     return render(request,'app/index.html')
 
+def serviciosApi(request):
+    return render(request,'app/serviciosApi.html')
+
+
+
 def servicios(request):
 
     servicios = Servicio.objects.all()
